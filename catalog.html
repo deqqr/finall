@@ -1,0 +1,303 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог оружия | Оружейный магазин "Арсенал"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Арсенал</h1>
+                <p>Профессиональное оружие и снаряжение</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="/catalog.html" class="active"><i class="fas fa-gun"></i> Каталог</a></li>
+                    <li><a href="#"><i class="fas fa-id-card"></i> Лицензии</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="auth">
+                <a href="#" class="login"><i class="fas fa-user"></i> Вход</a>
+                <a href="#" class="register">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="catalog-header">
+        <div class="container">
+            <h2>Каталог оружия</h2>
+            <p>Широкий выбор огнестрельного оружия для охоты, спорта и самообороны</p>
+        </div>
+    </section>
+
+    <section class="catalog-content">
+        <div class="container">
+            <div class="catalog-sidebar">
+                <div class="sidebar-widget">
+                    <h3>Категории</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="active">Все товары</a></li>
+                        <li><a href="#">Охотничье оружие</a></li>
+                        <li><a href="#">Спортивное оружие</a></li>
+                        <li><a href="#">Огнестрельное оружие</a></li>
+                        <li><a href="#">Холодное оружие</a></li>
+                        <li><a href="#">Снаряжение</a></li>
+                        <li><a href="#">Патроны</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Фильтры</h3>
+                    <div class="filter-group">
+                        <h4>Цена</h4>
+                        <div class="price-range">
+                            <input type="range" min="0" max="100000" value="50000" class="slider" id="priceRange">
+                            <div class="price-values">
+                                <span>0 руб.</span>
+                                <span id="priceValue">50,000 руб.</span>
+                                <span>100,000+ руб.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Производитель</h4>
+                        <ul class="filter-list">
+                            <li><label><input type="checkbox" checked> Все</label></li>
+                            <li><label><input type="checkbox"> Kalashnikov</label></li>
+                            <li><label><input type="checkbox"> Glock</label></li>
+                            <li><label><input type="checkbox"> Colt</label></li>
+                            <li><label><input type="checkbox"> Beretta</label></li>
+                            <li><label><input type="checkbox"> Winchester</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Калибр</h4>
+                        <ul class="filter-list">
+                            <li><label><input type="checkbox" checked> Все</label></li>
+                            <li><label><input type="checkbox"> 5.45×39 мм</label></li>
+                            <li><label><input type="checkbox"> 7.62×39 мм</label></li>
+                            <li><label><input type="checkbox"> 9×19 мм</label></li>
+                            <li><label><input type="checkbox"> .357 Magnum</label></li>
+                            <li><label><input type="checkbox"> 12 калибр</label></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn filter-btn">Применить фильтры</button>
+                    <button class="btn reset-btn">Сбросить</button>
+                </div>
+            </div>
+
+            <div class="catalog-main">
+                <div class="catalog-toolbar">
+                    <div class="sorting">
+                        <label for="sort">Сортировка:</label>
+                        <select id="sort">
+                            <option value="popular">По популярности</option>
+                            <option value="price-asc">По возрастанию цены</option>
+                            <option value="price-desc">По убыванию цены</option>
+                            <option value="newest">Сначала новые</option>
+                            <option value="name">По названию</option>
+                        </select>
+                    </div>
+                    <div class="view-options">
+                        <span>Вид:</span>
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Хит</div>
+                        <img src="https://via.placeholder.com/300x200?text=Glock+17" alt="Glock 17">
+                        <div class="product-info">
+                            <h3>Пистолет Glock 17 Gen 5</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">9×19 мм</span>
+                                <span class="product-country">Австрия</span>
+                            </div>
+                            <p class="product-desc">Самозарядный пистолет с ударниковым УСМ. Полимерная рамка, стальной затвор...</p>
+                            <div class="product-bottom">
+                                <p class="price">45,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Новинка</div>
+                        <img src="https://via.placeholder.com/300x200?text=AK-12" alt="AK-12">
+                        <div class="product-info">
+                            <h3>Автомат Калашникова АК-12</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">5.45×39 мм</span>
+                                <span class="product-country">Россия</span>
+                            </div>
+                            <p class="product-desc">Современная модификация автомата Калашникова с улучшенной эргономикой...</p>
+                            <div class="product-bottom">
+                                <p class="price">89,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Colt+Python" alt="Colt Python">
+                        <div class="product-info">
+                            <h3>Револьвер Colt Python</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">.357 Magnum</span>
+                                <span class="product-country">США</span>
+                            </div>
+                            <p class="product-desc">Револьвер двойного действия с высокой точностью стрельбы и плавным...</p>
+                            <div class="product-bottom">
+                                <p class="price">75,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Saiga-12" alt="Saiga-12">
+                        <div class="product-info">
+                            <h3>Карабин Saiga-12</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">12 калибр</span>
+                                <span class="product-country">Россия</span>
+                            </div>
+                            <p class="product-desc">Самозарядный гладкоствольный карабин на базе автомата Калашникова...</p>
+                            <div class="product-bottom">
+                                <p class="price">60,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Mosin+Nagant" alt="Mosin Nagant">
+                        <div class="product-info">
+                            <h3>Винтовка Mosin-Nagant</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">7.62×54 мм R</span>
+                                <span class="product-country">Россия</span>
+                            </div>
+                            <p class="product-desc">Легендарная магазинная винтовка с продольно-скользящим поворотным затвором...</p>
+                            <div class="product-bottom">
+                                <p class="price">25,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Акция</div>
+                        <img src="https://via.placeholder.com/300x200?text=Winchester+1894" alt="Winchester 1894">
+                        <div class="product-info">
+                            <h3>Винтовка Winchester 1894</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">.30-30 Winchester</span>
+                                <span class="product-country">США</span>
+                            </div>
+                            <p class="product-desc">Рычажная винтовка с подствольным трубчатым магазином, классическое оружие...</p>
+                            <div class="product-bottom">
+                                <p class="price old-price">55,000 руб.</p>
+                                <p class="price">49,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Beretta+92" alt="Beretta 92">
+                        <div class="product-info">
+                            <h3>Пистолет Beretta 92FS</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">9×19 мм</span>
+                                <span class="product-country">Италия</span>
+                            </div>
+                            <p class="product-desc">Самозарядный пистолет с коротким ходом ствола и УСМ двойного действия...</p>
+                            <div class="product-bottom">
+                                <p class="price">52,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Remington+700" alt="Remington 700">
+                        <div class="product-info">
+                            <h3>Винтовка Remington 700</h3>
+                            <div class="product-meta">
+                                <span class="product-caliber">.308 Winchester</span>
+                                <span class="product-country">США</span>
+                            </div>
+                            <p class="product-desc">Болтовая винтовка с продольно-скользящим затвором, популярная среди...</p>
+                            <div class="product-bottom">
+                                <p class="price">68,000 руб.</p>
+                                <button class="btn">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-nav disabled"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="page-num active">1</a>
+                    <a href="#" class="page-num">2</a>
+                    <a href="#" class="page-num">3</a>
+                    <a href="#" class="page-num">4</a>
+                    <a href="#" class="page-num">5</a>
+                    <a href="#" class="page-nav"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Арсенал</h3>
+                    <p>Профессиональное оружие и снаряжение для охоты, спорта и самообороны.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="#">Лицензии</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Оружейная, 15</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@arsenal.ru</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 10:00 - 20:00, Сб: 11:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Оружейный магазин "Арсенал". Все права защищены.</p>
+                <p>Продажа оружия осуществляется только при наличии соответствующих лицензий и разрешений.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
